@@ -1,16 +1,5 @@
-angular.module('app').controller('configs', ['$scope', 'data', '$mdDialog', function($scope, data, $mdDialog){
-	$scope.about = function(ev){
-		$mdDialog.show(
-			 $mdDialog.alert()
-			   .parent(angular.element(document.querySelector('#popupContainer')))
-			   .clickOutsideToClose(true)
-			   .title('Sobre')
-			   .textContent('Este guia foi desenvolvido com intuito de facilitar a projeção de custos entre permanecer no mesmo aluguel ou mudar para outro teoricamente mais em conta.')
-			   .ariaLabel('Sobre')
-			   .ok('Ok')
-			   .targetEvent(ev)
-		);
-	};
+angular.module('app').controller('configs', ['$scope', 'data', function($scope, data){
+
 
 	$scope.clear = function(){
 		delete data.atual.valor;

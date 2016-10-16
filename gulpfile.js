@@ -16,20 +16,20 @@ gulp.task('default', ['init', 'watch']);
 // Constroi 1 único arquivo app.js
 gulp.task('build-app', function() {
 	return gulp.src('./src/**/*.js')
-		.pipe(sourcemaps.init())
+		//.pipe(sourcemaps.init())
 		.pipe(concat('app.js'))
 		.pipe(uglify())
-		.pipe(sourcemaps.write())
+		//.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./dist/js'));
 });
 
 // Constroi 1 único arquivo .less
 gulp.task('build-less', function(){
 	return gulp.src('./src/**/*.less')
-		.pipe(sourcemaps.init())
+		//.pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(concat('styles.css'))
-		.pipe(sourcemaps.write())
+		//.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./dist/css'));
 });
 

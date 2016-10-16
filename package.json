@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager ./ --arch=x64 --asar=true --plataform=win32 --out=build",
+    "build": "electron-packager ./ --arch=x64 --asar=true --plataform=win32 --overwrite=true --out=build",
     "gulp": "gulp"
   },
   "author": "Raphael Brandão",

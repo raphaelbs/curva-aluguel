@@ -1,14 +1,10 @@
-angular.module('app').controller('charts', ['$scope', 'data', function($scope, data){
-	$scope.refresh = function(){
-		console.log(data);
-	};
-
+angular.module('app')
+.controller('charts', ['$scope', 'data', function($scope, data){
 	$scope.run = function(){
 		$scope.labels = [];
 		for(var i=1; i<data.add.tempo; i++)
 			$scope.labels.push(i);
 
-		$scope.series = ['Atual', 'Desejado'];
 		$scope.edata = [];
 		// Apto atual
 		var dataAtual = [];
@@ -56,20 +52,19 @@ angular.module('app').controller('charts', ['$scope', 'data', function($scope, d
 		dataNovo.forEach(function(n){
 			$scope.dataNovoSoma += n;
 		});
+	};
 
-		console.log($scope.edata);
-
-		$scope.options = {
-			scales: {
-			  yAxes: [
-			    {
-			      id: 'y-axis-1',
-			      type: 'linear',
-			      display: true,
-			      position: 'left'
-			    }
-			  ]
+	$scope.series = ['Atual', 'Desejado'];
+	$scope.options = {
+		scales: {
+		  yAxes: [
+			{
+			  id: 'y-axis-1',
+			  type: 'linear',
+			  display: true,
+			  position: 'left'
 			}
-		};
+		  ]
+		}
 	};
 }]);
