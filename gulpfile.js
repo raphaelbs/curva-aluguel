@@ -6,6 +6,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var htmlmin = require('gulp-htmlmin');
 var jsonminify = require('gulp-jsonminify');
 
+var distFolder = './app/dist/';
+
 // Operação padrão: chame 'gulp' no terminal
 gulp.task('init', ['build-app',
 	'build-less', 'build-html', 'build-json']);
@@ -20,7 +22,7 @@ gulp.task('build-app', function() {
 		.pipe(concat('app.js'))
 		.pipe(uglify())
 		//.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./dist/js'));
+		.pipe(gulp.dest(distFolder + 'js'));
 });
 
 // Constroi 1 único arquivo .less
@@ -30,21 +32,21 @@ gulp.task('build-less', function(){
 		.pipe(less())
 		.pipe(concat('styles.css'))
 		//.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./dist/css'));
+		.pipe(gulp.dest(distFolder + 'css'));
 });
 
 // Realoca arquivos html
 gulp.task('build-html', function(){
 	return gulp.src('./src/**/*.html')
 		.pipe(htmlmin({collapseWhitespace: true}))
-		.pipe(gulp.dest('./dist/html'));
+		.pipe(gulp.dest(distFolder + 'html'));
 });
 
 // Realoca arquivos json
 gulp.task('build-json', function(){
 	return gulp.src('./src/**/*.json')
 		.pipe(jsonminify())
-		.pipe(gulp.dest('./dist/html'));
+		.pipe(gulp.dest(distFolder + 'html'));
 });
 
 // Observa por mudanças nos arquivos

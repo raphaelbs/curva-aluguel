@@ -1,32 +1,34 @@
 {
-  "name": "curva-aluguel",
-  "version": "1.0.0",
-  "description": "Descreve a curva de gastos entre ficar com o aluguel atual e trocar de aluguel.",
-  "main": "index.js",
-  "private": true,
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-packager ./ --arch=x64 --asar=true --plataform=win32 --overwrite=true --out=build",
-    "gulp": "gulp"
-  },
-  "author": "Raphael Brandão",
-  "license": "MIT",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-htmlmin": "^2.0.0",
-    "gulp-jsonminify": "^1.0.0",
-    "gulp-less": "^3.1.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/raphaelbs/curva-aluguel.git"
-  },
-  "dependencies": {
-    "electron": "^1.4.3",
-    "electron-packager": "^8.1.0"
-  }
+	"build": {
+		"appId": "com.github.raphaelbs.curva_aluguel"
+	},
+	"name": "curva_aluguel",
+	"version": "1.0.0",
+	"description": "Descreve a curva de gastos entre ficar com o aluguel atual e trocar de aluguel.",
+	"main": "index.js",
+	"private": true,
+	"scripts": {
+		"start": "electron .",
+		"init": "npm install && npm prune && bower install && bower prune && gulp init",
+		"build:win": "build --win --x64",
+		"gulp": "gulp"
+	},
+	"author": "Raphael Brandão",
+	"license": "MIT",
+	"devDependencies": {
+		"electron": "^1.4.3",
+		"electron-builder": "^7.13.1",
+		"gulp": "^3.9.1",
+		"gulp-concat": "^2.6.0",
+		"gulp-htmlmin": "^2.0.0",
+		"gulp-jsonminify": "^1.0.0",
+		"gulp-less": "^3.1.0",
+		"gulp-sourcemaps": "^1.6.0",
+		"gulp-uglify": "^2.0.0",
+		"gulp-util": "^3.0.7"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/raphaelbs/curva-aluguel.git"
+	}
 }

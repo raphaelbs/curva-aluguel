@@ -1,0 +1,8 @@
+{
+	"name": "curva-aluguel",
+	"productName": "Curva de Aluguel",
+	"description": "Este guia foi desenvolvido com intuito de facilitar a projeção de custos entre permanecer no mesmo aluguel ou mudar para outro teoricamente mais em conta.",
+	"homepage": "https://github.com/raphaelbs/curva-aluguel",
+	"version": "1.0.0",
+	"author": "Raphael Brandão"
+}

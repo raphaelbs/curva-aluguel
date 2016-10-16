@@ -1,8 +1,9 @@
 node_modules
 bower_components
-dist/bower
-dist/css
-dist/html
-dist/js
-build
+app/dist/bower
+app/dist/css
+app/dist/html
+app/dist/js
+dist/win
+dist/win-unpacked
 npm-debug.log
