@@ -10,7 +10,7 @@
 	"scripts": {
 		"start": "electron .",
 		"init": "npm install && npm prune && bower install && bower prune && gulp init",
-		"build:win": "build --win --x64",
+		"build": "npm run init && build --win --x64",
 		"gulp": "gulp"
 	},
 	"author": "Raphael Brandão",
