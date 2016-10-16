@@ -15,12 +15,12 @@ gulp.task('default', ['init', 'watch']);
 
 // Constroi 1 único arquivo app.js
 gulp.task('build-app', function() {
-	return gulp.src('./src/app/**/*.js')
+	return gulp.src('./src/**/*.js')
 		.pipe(sourcemaps.init())
 		.pipe(concat('app.js'))
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./public/dist/js'));
+		.pipe(gulp.dest('./dist/js'));
 });
 
 // Constroi 1 único arquivo .less
