@@ -1,0 +1,17 @@
+{
+  "name": "curva-aluguel",
+  "description": "Descreve a curva de gastos entre ficar com o aluguel atual e trocar de aluguel.",
+  "main": "index.js",
+  "authors": [
+    "Raphael Brandão"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
