@@ -5,8 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-	"start": "electron .",
-    "build": "electron-packager ./ --all --out=build",
+    "start": "electron .",
+    "build": "electron-packager ./ --arch=x64 --asar=true --plataform=win32 --out=build",
     "gulp": "gulp"
   },
   "author": "Raphael Brandão",
@@ -22,10 +22,11 @@
     "gulp-util": "^3.0.7"
   },
   "repository": {
-   "type": "git",
-   "url": "git+https://github.com/raphaelbs/curva-aluguel.git"
+    "type": "git",
+    "url": "git+https://github.com/raphaelbs/curva-aluguel.git"
   },
   "dependencies": {
-    "electron": "^1.4.3"
+    "electron": "^1.4.3",
+    "electron-packager": "^8.1.0"
   }
 }

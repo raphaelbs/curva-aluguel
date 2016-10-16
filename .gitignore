@@ -4,4 +4,5 @@ dist/bower
 dist/css
 dist/html
 dist/js
+build
 npm-debug.log

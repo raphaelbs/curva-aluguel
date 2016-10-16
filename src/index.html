@@ -25,8 +25,8 @@
 				<span>Curva de Aluguel</span>
 			</h2>
 			<span flex></span>
-			<md-button class="md-icon-button" aria-label="Mais opções">
-				<i class="material-icons">more_vert</i>
+			<md-button class="md-icon-button" aria-label="Sobre" ng-click="about($event)">
+				<i class="material-icons">info_outline</i>
 			</md-button>
 			</div>
 		</md-toolbar>
@@ -108,7 +108,7 @@
 			            	<input ng-model="add.tempo" placeholder="30">
 			          	</md-input-container>
 						<md-input-container class="md-block" flex>
-			            	<label>Prestações IPTU</label>
+			            	<label>Prestações Mudança</label>
 			            	<input ng-model="add.prestacoes.mudanca" placeholder="10">
 			          	</md-input-container>
 						<md-input-container class="md-block" flex>
@@ -136,10 +136,6 @@
 					<md-button class="md-icon-button" aria-label="Gerar" ng-click="run()">
 						<i class="material-icons">play_arrow</i>
 						<md-tooltip>Gerar</md-tooltip>
-					</md-button>
-					<md-button class="md-icon-button" aria-label="Atualizar" ng-click="refresh()">
-						<i class="material-icons">refresh</i>
-						<md-tooltip>Atualizar</md-tooltip>
 					</md-button>
 					</div>
 				</md-toolbar>
