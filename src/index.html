@@ -108,12 +108,22 @@
 			            	<input ng-model="add.tempo" placeholder="30">
 			          	</md-input-container>
 						<md-input-container class="md-block" flex>
-			            	<label>Prestações IPTU/Incêndio</label>
-			            	<input ng-model="add.prestacoes" placeholder="10">
+			            	<label>Prestações IPTU</label>
+			            	<input ng-model="add.prestacoes.mudanca" placeholder="10">
+			          	</md-input-container>
+						<md-input-container class="md-block" flex>
+			            	<label>Prestações Pintura</label>
+			            	<input ng-model="add.prestacoes.pintura" placeholder="10">
+			          	</md-input-container>
+						<md-input-container class="md-block" flex>
+			            	<label>Prestações IPTU</label>
+			            	<input ng-model="add.prestacoes.iptu" placeholder="10">
+			          	</md-input-container>
+						<md-input-container class="md-block" flex>
+			            	<label>Prestações Incêndio</label>
+			            	<input ng-model="add.prestacoes.incendio" placeholder="10">
 			          	</md-input-container>
 					</div>
-
-					<md-button class="md-raised md-primary">Gerar</md-button>
 				</div>
 			</div>
 
@@ -123,14 +133,34 @@
 					<div class="md-toolbar-tools">
 					<h3>Projeção</h3>
 					<span flex></span>
+					<md-button class="md-icon-button" aria-label="Gerar" ng-click="run()">
+						<i class="material-icons">play_arrow</i>
+						<md-tooltip>Gerar</md-tooltip>
+					</md-button>
+					<md-button class="md-icon-button" aria-label="Atualizar" ng-click="refresh()">
+						<i class="material-icons">refresh</i>
+						<md-tooltip>Atualizar</md-tooltip>
+					</md-button>
 					</div>
 				</md-toolbar>
 
 				<div layout="column" layout-padding layout-align="center center">
-					<canvas id="line" class="chart chart-line" chart-data="data"
+					<canvas id="line" class="chart chart-line" chart-data="edata"
 					chart-labels="labels" chart-series="series" chart-options="options"
 					chart-dataset-override="datasetOverride" chart-click="onClick">
 					</canvas>
+
+					<div ng-show="labels">
+						<h3>Atual</h3>
+						<ul>
+							<li>Total: {{dataAtualSoma}}</li>
+						</ul>
+
+						<h3>Novo</h3>
+						<ul>
+							<li>Total: {{dataNovoSoma}}</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
