@@ -17,7 +17,6 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-chart.js": "^1.0.3",
-    "angular-material": "^1.1.1",
-    "material-design-icons": "^3.0.1"
+    "angular-material": "^1.1.1"
   }
 }
